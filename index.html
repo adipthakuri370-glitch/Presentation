@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 presentation</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="presentation-container">
+
+    <!-- Slide 1 -->
+    <div class="slide active" id="slide-1">
+        <div class="slide-number">Slide 1 of 6</div>
+        <h1>Dashain Festival</h1>
+        <div class="author">Presented by: Adip Uchai Thakuri</div>
+        <p>Welcome! This is a simple presentation about Dashain, the biggest and most important festival in Nepal.</p>
+        <img src="41296.jpg" alt="Dashain Celebration" class="slide-img">
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" id="slide-2">
+        <div class="slide-number">Slide 2 of 6</div>
+        <h2>What is Dashain?</h2>
+        <ul>
+            <li>Dashain is the biggest festival in Nepal.</li>
+            <li>It celebrates the victory of good over evil.</li>
+            <li>Families come together to celebrate, eat good food, and receive blessings.</li>
+        </ul>
+        <img src="41296.jpg" alt="Family Celebration" class="slide-img">
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" id="slide-3">
+        <div class="slide-number">Slide 3 of 6</div>
+        <h2>Tika and Jamara</h2>
+        <ul>
+            <li>Elders put Tika (red color paste) on our foreheads.</li>
+            <li>They give us Jamara (sacred yellow grass).</li>
+            <li>They give us blessings for a good and happy life.</li>
+        </ul>
+        <img src="41294.jpg" alt="Tika and Jamara" class="slide-img">
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" id="slide-4">
+        <div class="slide-number">Slide 4 of 6</div>
+        <h2>Bamboo Swing (Linge Ping)</h2>
+        <ul>
+            <li>People make big bamboo swings called Linge Ping.</li>
+            <li>It is fun to play on the swing during Dashain.</li>
+            <li>It is believed that everyone must leave the ground at least once during Dashain.</li>
+        </ul>
+        <img src="41292.jpg" alt="Bamboo Swing" class="slide-img">
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide" id="slide-5">
+        <div class="slide-number">Slide 5 of 6</div>
+        <h2>Special Food: Sel Roti</h2>
+        <ul>
+            <li>Sel Roti is a traditional sweet ring-shaped bread made of rice flour.</li>
+            <li>Families cook it together during Dashain.</li>
+            <li>It is very tasty and popular during the festival.</li>
+        </ul>
+        <img src="41290.jpg" alt="Sel Roti" class="slide-img">
+    </div>
+
+    <!-- Slide 6 -->
+    <div class="slide" id="slide-6">
+        <div class="slide-number">Slide 6 of 6</div>
+        <h2>Conclusion</h2>
+        <ul>
+            <li>Dashain brings families and friends together.</li>
+            <li>It fills our hearts with joy, love, and peace.</li>
+            <li>Thank you for listening! Happy Dashain!</li>
+        </ul>
+        <img src="41296.jpg" alt="Dashain Festival" class="slide-img">
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        <button onclick="prevSlide()">Previous</button>
+        <button onclick="nextSlide()">Next</button>
+    </div>
+
+</div>
+
+<!-- JavaScript for slide navigation -->
+<script>
+    let currentSlide = 1;
+    const totalSlides = 6;
+
+    function showSlide(n) {
+        document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+        if (n > totalSlides) currentSlide = 1;
+        if (n < 1) currentSlide = totalSlides;
+        document.getElementById('slide-' + currentSlide).classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        currentSlide--;
+        showSlide(currentSlide);
+    }
+</script>
+
+</body>
+</html>
